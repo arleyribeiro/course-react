@@ -1,5 +1,4 @@
-import { element } from "prop-types";
-import React, { Fragment } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
 
 // function Greeting() {
