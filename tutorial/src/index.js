@@ -14,28 +14,20 @@ function BookList() {
   );
 }
 
+const author = "Old Farmer’s Almanac";
 const Book = () => {
-  const title = "title";
+  const title =
+    "The Old Farmer's Almanac 2022 Trade EdiThe Old Farmer's Almanac 2022 Trade";
   return (
     <article className="book">
-      <Image></Image>
-      <Title></Title>
-      <Author></Author>
+      <img
+        src="https://images-na.ssl-images-amazon.com/images/I/51tpY0oLw3L._AC_SX184_.jpg"
+        alt=""
+      />
+      <h1>{title}</h1>
+      <h4 className="author">{author}</h4>
     </article>
   );
 };
 
-const Image = () => (
-  <img
-    src="https://images-na.ssl-images-amazon.com/images/I/51tpY0oLw3L._AC_SX184_.jpg"
-    alt=""
-  />
-);
-
-const Author = () => <h4 className="author">Old Farmer’s Almanac</h4>;
-const Title = () => (
-  <h1>
-    The Old Farmer's Almanac 2022 Trade EdiThe Old Farmer's Almanac 2022 Trade
-  </h1>
-);
 ReactDOM.render(<BookList />, document.getElementById("root"));
