@@ -15,6 +15,7 @@ function BookList() {
 }
 
 const Book = () => {
+  const title = "title";
   return (
     <article className="book">
       <Image></Image>
@@ -31,7 +32,7 @@ const Image = () => (
   />
 );
 
-const Author = () => <h1>Old Farmer’s Almanac</h1>;
+const Author = () => <h4 className="author">Old Farmer’s Almanac</h4>;
 const Title = () => (
   <h1>
     The Old Farmer's Almanac 2022 Trade EdiThe Old Farmer's Almanac 2022 Trade
