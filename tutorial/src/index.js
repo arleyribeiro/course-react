@@ -22,7 +22,9 @@ function BookList() {
         author={firstBook.author}
         title={firstBook.title}
         img={firstBook.img}
-      />
+      >
+        <p>Lorem lorem</p>
+      </Book>
       <Book {...secondBook} />
       <Book />
       <Book />
@@ -38,6 +40,7 @@ const Book = (props) => {
       <img src={props.img} alt="" />
       <h1>{props.title}</h1>
       <h4 className="author">{props.author}</h4>
+      {props.children}
     </article>
   );
 };

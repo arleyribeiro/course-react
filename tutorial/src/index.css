@@ -30,6 +30,7 @@ body {
   border-radius: 1rem;
   padding: 1rem 2rem;
   display: grid;
+  justify-content: start;
 }
 
 .book h1 {
