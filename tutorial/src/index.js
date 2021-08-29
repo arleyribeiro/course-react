@@ -1,40 +1,40 @@
 import React from "react";
 import ReactDOM from "react-dom";
-
-// function Greeting() {
-//   return <h1>Greeting</h1>;
-// }
-
-// const Greeting = () => {
-//   return React.createElement("h1", {}, "Hello world");
-// };
-
-// JSX Rules
-// return single element
-// div / section /article or Fragment
-// user camelCase for html attribute
-// classeName instead of class
-// close every element
-// formatting
-function Greeting() {
+import "./index.css";
+//Nested components, react tools
+function BookList() {
   return (
-    <div className="greeting">
-      <h3>Hello people</h3>
-      <ul>
-        <li>
-          <h1>Greeting</h1>
-        </li>
-      </ul>
-    </div>
+    <section className="booklist">
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+    </section>
   );
 }
 
-// const Greeting = () => {
-//   return React.createElement(
-//     "div",
-//     {},
-//     React.createElement("h1", {}, "hello world")
-//   );
-// };
+const Book = () => {
+  return (
+    <article className="book">
+      <Image></Image>
+      <Title></Title>
+      <Author></Author>
+    </article>
+  );
+};
 
-ReactDOM.render(<Greeting />, document.getElementById("root"));
+const Image = () => (
+  <img
+    src="https://images-na.ssl-images-amazon.com/images/I/51tpY0oLw3L._AC_SX184_.jpg"
+    alt=""
+  />
+);
+
+const Author = () => <h1>Old Farmer’s Almanac</h1>;
+const Title = () => (
+  <h1>
+    The Old Farmer's Almanac 2022 Trade EdiThe Old Farmer's Almanac 2022 Trade
+  </h1>
+);
+ReactDOM.render(<BookList />, document.getElementById("root"));
