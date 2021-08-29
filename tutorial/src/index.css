@@ -36,6 +36,9 @@ body {
   margin-top: 0.5rem;
 }
 
+.book img {
+  width: 100px;
+}
 .author {
   color: "#617d98";
   font-size: "0.75rem";
