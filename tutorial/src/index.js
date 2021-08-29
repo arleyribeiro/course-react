@@ -12,9 +12,15 @@ const books = [
   },
   {
     id: 2,
-    author: "1984 (Clássicos da literatura mundial)",
-    title: "George Orwell (Author), Karla Lima (Translater)",
+    author: "George Orwell (Author), Karla Lima (Translater)",
+    title: "1984 (Clássicos da literatura mundial)",
     img: "https://m.media-amazon.com/images/I/51enL1+QZfL.jpg",
+  },
+  {
+    id: 3,
+    author: "George Orwell (Author), Karla Lima (Translater)",
+    title: "A revolução dos bichos",
+    img: "https://m.media-amazon.com/images/I/51vQYE2SWiL.jpg",
   },
 ];
 
@@ -29,13 +35,33 @@ function BookList() {
 }
 
 const Book = (props) => {
+  const { img, title, author } = props;
   console.log(props);
+  const clickHandler = () => {
+    alert("hello word");
+  };
+  const complexExampleHandler = (author) => {
+    console.log(author);
+  };
+
+  const eventHandler = (event) => {
+    console.log(event);
+  };
+
   return (
     <article className="book">
-      <img src={props.img} alt="" />
-      <h1>{props.title}</h1>
-      <h4 className="author">{props.author}</h4>
-      {props.children}
+      <img src={img} alt="" />
+      <h1>{title}</h1>
+      <h4 className="author">{author}</h4>
+      <button type="button" onClick={clickHandler}>
+        reference example
+      </button>
+      <button type="button" onClick={() => complexExampleHandler(author)}>
+        more complex example
+      </button>
+      <button type="button" onClick={(event) => eventHandler(event)}>
+        event handler
+      </button>
     </article>
   );
 };
